@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>授業カレンダー</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>授業カレンダー</h1>
+
+<div class="calendar-controls">
+    <button id="prevMonth">◀</button>
+    <span id="monthYear"></span>
+    <button id="nextMonth">▶</button>
+</div>
+
+<div class="calendar-header">
+    <div>日</div><div>月</div><div>火</div>
+    <div>水</div><div>木</div><div>金</div><div>土</div>
+</div>
+
+<div id="calendar"></div>
+
+<hr>
+
+<h2>授業を追加</h2>
+<form id="classForm">
+    授業名: <input type="text" id="className" required>
+    曜日:
+    <select id="classDay">
+        <option value="0">日</option>
+        <option value="1">月</option>
+        <option value="2">火</option>
+        <option value="3">水</option>
+        <option value="4">木</option>
+        <option value="5">金</option>
+        <option value="6">土</option>
+    </select>
+    時限: <input type="text" id="period" required>
+    開始日: <input type="date" id="startDate" required>
+    回数: <input type="number" id="classCount" min="1" required>
+    <button type="submit">追加</button>
+</form>
+
+<h2>課題を追加</h2>
+<form id="taskForm">
+    授業名: <input type="text" id="taskClassName" required>
+    締切日: <input type="datetime-local" id="deadline" required>
+    回数: <input type="number" id="taskCount" min="1" required>
+    <button type="submit">追加</button>
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>
